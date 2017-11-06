@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circles</title>
+	<link rel="stylesheet" type="text/css" href="circles.css">
+	<script type="text/javascript" src="paper-full.js"></script>
+
+	<script type="text/paperscript" canvas="myCanvas">
+
+	<!-- //didn't end up using these -->
+<!-- 	var gradient = new Gradient(['yellow', 'red', 'blue']); -->
+<!-- 	var gradientColor = new Color(gradient); -->
+
+
+	function makeCircle() {
+<!-- 	//every 100 px, make new circle on horizontal, with constant vertical coordinate of 50
+	 -->	
+
+		var i, j
+		for (i = 10; i < 1200; i+=100) {
+			for(j = 0; j < 500; j+=50) {
+				var newCircle = new Path.Circle(new Point(i, j), 10);
+				newCircle.fillColor = 'red';
+
+			}
+		}
+	}
+
+
+	makeCircle();
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
